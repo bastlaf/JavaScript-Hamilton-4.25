@@ -28,6 +28,13 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener ("click", function() {
+
+        let tableauAvecDoublons = fruits;
+        let tableauSansDoublon = Array.from(new Set(fruits));
+        console.table(tableauSansDoublon);
+
+    })
+
 
 })();

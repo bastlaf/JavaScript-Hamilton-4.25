@@ -12,7 +12,14 @@
 (function() {
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    let today = new Date();
+    let hours = today.getHours();
 
-    // your code here
+
+    if (hours >= 18) {
+        document.getElementById("target").innerText = "Good evening"; //innerText permet plus de sécurité que innerHTML
+    } else {
+        document.getElementById("target").innerText = "Hello";
+    }
 
 })();

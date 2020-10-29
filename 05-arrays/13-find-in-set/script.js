@@ -22,5 +22,17 @@
         "Lucas",
     ]);
 
-    // your code here
+    document.getElementById("run").addEventListener ("click", function() {
+
+        console.log(people.size);
+
+        if (people.has("Alexandre")) {
+            console.log("oui, il y a un Alexandre.");
+
+        } else {
+            console.log("non, il n'y a pas d'Alexandre.");
+        }
+    
+    })
+
 })();

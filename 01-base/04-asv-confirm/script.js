@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
-
     // your code here
-
+ while (true) {
+    let age = prompt("Quel est votre age ?");
+    let genre = prompt("Quel est votre genre ?");
+    let ville = prompt("Quel est votre ville ?");
+    
+    alert ("so, you are " + age + ", you're a " + genre + ", and you live at" + ville);
+    let confirm = prompt("données correctes ?");
+    if (confirm === "yes") {
+        break;
+    };}
 })();

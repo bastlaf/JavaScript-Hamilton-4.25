@@ -13,5 +13,7 @@
     let whatever = "hello world!!!";
     alert(whatever);
     // your code here
-
+    let test = "bonjour petit monde merveilleux qu'est la planète terre, j'espère que tu vas bien !!!";
+    alert(test);
 })();
+

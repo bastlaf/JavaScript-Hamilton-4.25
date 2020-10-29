@@ -10,7 +10,10 @@
 // You will have time to focus on it later.
 
 (function() {
+    
+    let variable = document.getElementsByClassName("target");
 
-    // your code here
-
+    for(let i = 0; i <= variable.length; i++) {
+    variable[i].innerText = "owned";
+    }
 })();

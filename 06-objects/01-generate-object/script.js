@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    document.getElementById("run").addEventListener ("click", function() {
+
+        let présentation = new Object();
+            présentation.lastName = "Lafalize";
+            présentation.firstName = "Bastien";
+            présentation.age = 18;
+            présentation.city = "Liège";
+            présentation.country = "Belgium";
+        console.table(présentation);
+    })
+
 })();

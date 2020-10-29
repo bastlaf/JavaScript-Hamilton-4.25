@@ -14,7 +14,32 @@
 
     const performOperation = operation => {
         // perform the operation
-    };
+        switch (operation) {
+            case "addition":
+                var result = parseInt(document.getElementById("op-one").value)+
+                parseInt(document.getElementById("op-two").value);
+                alert(result);
+                break;
+
+            case "substraction":
+                result = parseInt(document.getElementById("op-one").value)-
+                parseInt(document.getElementById("op-two").value);
+                alert(result); 
+                break;
+
+            case "multiplication":
+                result = parseInt(document.getElementById("op-one").value)*
+                parseInt(document.getElementById("op-two").value);
+                alert(result); 
+                break;
+
+            case "division":
+                result = parseInt(document.getElementById("op-one").value)/
+                parseInt(document.getElementById("op-two").value);
+                alert(result); 
+                break;
+        }
+    }
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
         $btn.addEventListener(

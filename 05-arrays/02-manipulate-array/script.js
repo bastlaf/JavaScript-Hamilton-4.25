@@ -24,6 +24,12 @@
         "cerise",
     ];
 
+    var removeStart = fruits.pop();
+    var removeLast = fruits.shift();
+    fruits.unshift("banana");
+    fruits.push("kiwi");
+    console.table(fruits);
+
     // your code here
 
 })();

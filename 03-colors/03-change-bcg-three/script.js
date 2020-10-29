@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    
+    document.getElementById("run").addEventListener ("click", function () {
+        document.body.style.background = color;
+    })
 })();

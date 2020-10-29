@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
-
   // your code here
+  let question = confirm("Tu veux un peu de gateaux ?");
+  if (question) {
+    alert("CHAMPION")
+  }
+  else {
+    alert("LOOSER")
+  }
 
 })();

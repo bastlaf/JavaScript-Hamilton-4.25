@@ -89,6 +89,23 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener ("click", function() {
+
+            people.forEach(valeur => console.log(people[8].email));
+            });
 
 })();
+
+/*
+Bonne manière de faire : 
+
+document.getElementById("run").addEventListener("click", function() {
+    people.forEach(gens => {
+        if (gens["firstname"] == "Jean" && gens["lastname"] == "Dupont") {
+            console.log(gens["email"]);
+        }
+    })
+
+
+})
+*/

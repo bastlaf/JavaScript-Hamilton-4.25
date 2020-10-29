@@ -26,6 +26,16 @@
         "cherry",
     ];
 
+    document.getElementById("run").addEventListener ("click", function() {
+
+        for(let valeur of fruits){ 
+
+            console.table(valeur); //renvoie le nom de la valeur en cours à chaque boucle
+
+        }
+
+    });
+
     // your code here
 
 })();

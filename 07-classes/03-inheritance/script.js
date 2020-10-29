@@ -15,5 +15,15 @@
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
-    // your code here
+
+
+console.log("ON DOIT PAS LE FAIRE CELUI CI HAAAAAAAAAAAAAAAAAAAAAAAAAA !!!!!!!!")
+
+
+
+
+
+
+
+
 })();

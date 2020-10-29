@@ -26,6 +26,7 @@
         "cherry",
     ];
 
+    console.table(fruits[3]);
     // your code here
 
 })();

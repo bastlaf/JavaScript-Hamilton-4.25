@@ -89,6 +89,18 @@
         },
     ];
 
+    document.getElementById("run").addEventListener ("click", function() {
+        let tabl = [];
+
+        people.forEach(gens => {
+            if (gens.age > 18) {
+                tabl.push(gens);
+            }
+
+        })
+        console.log(tabl);
+
+    })();
     // your code here
 
 })();

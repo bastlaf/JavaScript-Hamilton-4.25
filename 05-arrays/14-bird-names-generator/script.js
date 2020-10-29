@@ -38,5 +38,33 @@
         "arboré",
     ]);
 
+
+    document.getElementById("run").addEventListener ("click", function() {
+       
+        let randomBirds = Math.floor(Math.random() * birds.length);
+        let birdName = birds[randomBirds].name;
+        let birdFem = birds[randomBirds].fem;
+        
+       
+        let randomAdjectives = Math.floor(Math.random() * adjectives.size);
+        let adjectivesArray = [...adjectives];
+        let adjective = adjectivesArray[randomAdjectives];
+
+        if (birdFem == true) {
+            document.getElementById("target").innerHTML = "La " + birdName + " " + adjective + "e";
+        } else {
+            document.getElementById("target").innerHTML = "Le " + birdName + " " + adjective;
+        }
+
+    })
+
+
+
+
+
+
+
+
+
     // your code here
 })();
