@@ -32,14 +32,14 @@
             computers.forEach((computer) => {
                 computer.user = computer.user || defaultProps.user;
                 computer.os = computer.os || defaultProps.os;
-                computer.available = computer.available || defaultProps.available;
+                if (computer.available !== false){
+                    computer.available = defaultProps.available;
+                }
 
                 console.table(computer);
 
             });
 
         })
-
-
 
 })();

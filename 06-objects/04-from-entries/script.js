@@ -13,7 +13,7 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     
-   /* let button = document.getElementById("run");
+    /*let button = document.getElementById("run");
     button.addEventListener ("click", function () {
 
         let keysObject = Object.fromEntries(keys.entries());
@@ -25,7 +25,8 @@
         keysObjectKeys.forEach(item => console.table(item));
         valuesObjectValues.forEach(item => console.table(item));
 
-    }); */
+    }); 
+    */
 
     let tableau = []
     for (i=0; i<5; i++) {
