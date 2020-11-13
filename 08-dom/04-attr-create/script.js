@@ -10,12 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
+    const image = document.getElementById("source").getAttribute("data-image");
 
-    let sourceImage = document.getElementById("source").getAttribute("data-image"); 
-    let target = document.getElementById("target");
-    let image = document.createElement("img");
-
-    image.setAttribute("src",sourceImage);
-    target.appendChild(image);
-
+    document.getElementById("target").innerHTML = `<img src="${image}" />`;
+    document.getElementById("source").remove();
 })();

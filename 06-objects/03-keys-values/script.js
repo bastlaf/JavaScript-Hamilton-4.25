@@ -19,11 +19,8 @@
         status: "married",
     };
 
-    document.getElementById("run").addEventListener("click", function() {
-
-        console.table(Object.keys(person));
-        console.table(Object.values(person));
-
-    })
-
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(Object.keys(person));
+        console.log(Object.values(person));
+    });
 })();

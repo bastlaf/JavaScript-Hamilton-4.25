@@ -9,42 +9,38 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function(){
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("addition").addEventListener("click", function() {
         // perform an addition
-        var result
-        result = parseInt(document.getElementById("op-one").value)+
-        parseInt(document.getElementById("op-two").value);
+        let terme1 = parseInt( document.getElementById("op-one").value, 10 );
+        let terme2 = +document.getElementById("op-two").value;
 
-        alert(result);
-
+        alert(`Result is: ${terme1 + terme2}`);
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
         // perform an substraction
-        result = parseInt(document.getElementById("op-one").value)-
-        parseInt(document.getElementById("op-two").value);
+        let terme1 = +document.getElementById("op-one").value;
+        let terme2 = +document.getElementById("op-two").value;
 
-        alert(result);
+        alert(`Result is: ${terme1 - terme2}`);
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
         // perform an multiplication
-        result = parseInt(document.getElementById("op-one").value)*
-        parseInt(document.getElementById("op-two").value);
+        let terme1 = +document.getElementById("op-one").value;
+        let terme2 = +document.getElementById("op-two").value;
 
-        alert(result);
-
+        alert(`Result is: ${terme1 * terme2}`);
     });
 
     document.getElementById("division").addEventListener("click", function() {
         // perform an division
-        result = parseInt(document.getElementById("op-one").value)/
-        parseInt(document.getElementById("op-two").value);
+        let terme1 = +document.getElementById("op-one").value;
+        let terme2 = +document.getElementById("op-two").value;
 
-        alert(result);
-
+        alert(`Result is: ${terme1 / terme2}`);
     });
 })();

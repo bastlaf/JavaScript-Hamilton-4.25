@@ -14,32 +14,24 @@
 
     const performOperation = operation => {
         // perform the operation
+        let terme1 = +document.getElementById("op-one").value;
+        let terme2 = +document.getElementById("op-two").value;
+
         switch (operation) {
             case "addition":
-                var result = parseInt(document.getElementById("op-one").value)+
-                parseInt(document.getElementById("op-two").value);
-                alert(result);
+                alert(`The result is: ${terme1 + terme2}`);
                 break;
-
             case "substraction":
-                result = parseInt(document.getElementById("op-one").value)-
-                parseInt(document.getElementById("op-two").value);
-                alert(result); 
+                alert(`The result is: ${terme1 - terme2}`);
                 break;
-
             case "multiplication":
-                result = parseInt(document.getElementById("op-one").value)*
-                parseInt(document.getElementById("op-two").value);
-                alert(result); 
+                alert(`The result is: ${terme1 * terme2}`);
                 break;
-
             case "division":
-                result = parseInt(document.getElementById("op-one").value)/
-                parseInt(document.getElementById("op-two").value);
-                alert(result); 
+                alert(`The result is: ${terme1 / terme2}`);
                 break;
         }
-    }
+    };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
         $btn.addEventListener(

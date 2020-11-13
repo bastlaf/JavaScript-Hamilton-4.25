@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 (function() {
-
     const fruits = [
         "apple",
         "perry",
@@ -26,18 +25,7 @@
         "cherry",
     ];
 
-    document.getElementById("run").addEventListener ("click", function() {
-
-            if (fruits.find(element => element == "apple")) {
-                console.log("oui, il y a une pomme.");
-  
-            } else {
-                console.log("non, il n'y a pas de pomme.");
-            }
-
-
-    })();
-
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(fruits.includes("pomme") ? "yes" : "no");
+    });
 })();

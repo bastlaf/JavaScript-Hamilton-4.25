@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    var fruits = [
+    const fruits = [
         "pomme",
         "poire",
         "fraise",
@@ -24,12 +23,15 @@
         "cerise",
     ];
 
-    var removeStart = fruits.pop();
-    var removeLast = fruits.shift();
-    fruits.unshift("banana");
-    fruits.push("kiwi");
-    console.table(fruits);
-
     // your code here
+    const button = document.getElementById("run");
 
+    button.addEventListener("click", () => {
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift("Banana");
+        fruits.push("Kiwi");
+
+        alert(fruits);
+    });
 })();

@@ -10,16 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
-
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    let today = new Date();
-    let hours = today.getHours();
-    let min = today.getMinutes();
 
-    if (hours > 17 || (hours ==17 && min > 30)) {
-        document.getElementById("target").innerText = "Good evening"; //innerText permet plus de sécurité que innerHTML
+    // your code here
+
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const time = hours * 100 + minutes; // 1h30 -> 130 ; 22h45 -> 2245
+
+    let greet;
+
+    if (time < 1730) {
+        greet = "Hello";
     } else {
-        document.getElementById("target").innerText = "Hello";
+        greet = "Good evening";
     }
 
+    document.getElementById("element-id").innerHTML = greet;
 })();

@@ -9,45 +9,40 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    let nombreMois = [];
-    let monthlist = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
+function friday13th(year) {
+    let monthsArray = [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "juny",
+        "july",
+        "augustus",
+        "september",
+        "october",
+        "november",
+        "december",
     ];
 
+    let results = [];
 
+    for (let month = 0; month < 12; month++) {
+        let day = new Date(year, month, 13);
 
-    function MoisVendredi13(){
-
-        let year = document.getElementById("year").value;
-
-        for (let i=0; i<12; i++) {
-           let date = new Date(year, i, 13);
-           if (date.getDay() == 5 ) {
-               nombreMois.push(monthlist[i]);
-           } 
+        if (day.getDay() === 5) {
+            results.push(monthsArray[month]);
         }
-        return nombreMois;
     }
 
-    document.getElementById("run").addEventListener ("click", function() {
+    return results;
+}
 
-        MoisVendredi13();
-        alert(nombreMois);
-        nombreMois.length= 0;
+(function() {
+    document.getElementById("run").addEventListener("click", () => {
+        let year = document.getElementById("year").value;
+
+        console.log(year);
+        console.log(friday13th(year));
     });
-
-
 })();

@@ -9,17 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
+(function() {
+    const camelia = {
+        lastname: "Jarek",
+        firstname: "Camélia",
+        age: "25",
+        city: "Liège",
+        country: "Belgium",
+    };
 
-    document.getElementById("run").addEventListener ("click", function() {
-
-        let présentation = new Object();
-            présentation.lastName = "Lafalize";
-            présentation.firstName = "Bastien";
-            présentation.age = 18;
-            présentation.city = "Liège";
-            présentation.country = "Belgium";
-        console.table(présentation);
-    })
-
+    document.getElementById("run").addEventListener("click", function() {
+        console.log(camelia);
+    });
 })();

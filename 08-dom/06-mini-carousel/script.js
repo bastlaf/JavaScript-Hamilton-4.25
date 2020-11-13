@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    var gallery= [
+    let gallery = [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
         "../../_shared/img/compass.svg",
@@ -19,18 +18,13 @@
         "../../_shared/img/map.svg",
     ];
 
-    let y = 0;
+    let index = 0;
+    const image = document.querySelector("img");
 
-    document.getElementById("next").addEventListener("click", function() {
-
-        if (y == gallery.length-1) {
-            y = 0;
-        } else {
-            y++;
+    document.getElementById("next").addEventListener("click", () => {
+        if (++index === gallery.length){
+            index = 0;
         }
-
-        document.querySelector(".material>figure>img").src = gallery[y];
-
+        image.src = gallery[index];
     });
-
 })();

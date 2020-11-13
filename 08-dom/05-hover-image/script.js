@@ -10,15 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
+    const img = document.querySelector("img");
 
-    let x = document.getElementsByTagName("IMG")[0].getAttribute("src"); 
-    let y = document.getElementsByTagName("IMG")[0].getAttribute("data-hover"); 
-    console.log(x);
+    const base = img.getAttribute("src"); //prend l'élement IMG 0 avec l'attribut src
+    const hovered = img.getAttribute("data-hover"); //prend l'élement IMG 0 avec le nom data-hover
 
-    document.getElementsByTagName("img")[0].addEventListener("mouseover", () => {
-        document.getElementsByTagName("img")[0].src = y;
+    img.addEventListener("mouseover", () => {
+        //ajoute un évenement mouseover, quand on passe la souris l'image date-hover (coeur) apparait
+        img.src = hovered;
     });
-    document.getElementsByTagName("img")[0].addEventListener("mouseout", () => {
-        document.getElementsByTagName("img")[0].src = x;
+    img.addEventListener("mouseout", () => {
+        //ajoute un évenement mouseout, quand la souris quitte l'image l'image nocoeur revient
+        //si cette action n'est pas ajoutée l'image data-hover/coeur reste
+        img.src = base;
     });
 })();

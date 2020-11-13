@@ -9,9 +9,8 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    var fruits = [
+(() => {
+    const fruits = [
         "pomme",
         "poire",
         "fraise",
@@ -25,9 +24,8 @@
         "raisin",
         "cerise",
     ];
-        document.getElementById("run").addEventListener ("click", function() {
 
-            fruits.forEach(valeur => console.table(valeur));
-            });
-        // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        fruits.forEach(element => console.log(element));
+    });
 })();

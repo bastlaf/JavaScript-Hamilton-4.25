@@ -10,24 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-document.getElementById("run").addEventListener("click", function() {
-
-    const person = class {
+    class Person {
         constructor(firstname, lastname) {
-          this.firstname = firstname;
-          this.lastname = lastname;
+            this.firstname = firstname;
+            this.lastname = lastname;
         }
-   
-        Sayhello(){
-            return "Say hello " + this.firstname + " " + this.lastname;
+        sayHello() {
+            console.log(`Hello, ${this.firstname} ${this.lastname}!`);
         }
-
     }
 
-    let jeanjacques = new person("Jean,", "dit <le bon vieux jackou>!"); console.table();
+    document.getElementById("run").addEventListener("click", function() {
+        const meSandrine = new Person("Sandrine", "Lê");
+        meSandrine.sayHello();
 
-    console.table(jeanjacques.Sayhello());
-
-});
-
+        const meLeny = new Person("Pierre-Antoine", "Delnatte");
+        meLeny.sayHello();
+    });
 })();

@@ -10,10 +10,6 @@
 // You will have time to focus on it later.
 
 (function() {
-    
-    let variable = document.getElementsByClassName("target");
-
-    for(let i = 0; i <= variable.length; i++) {
-    variable[i].innerText = "owned";
-    }
+    // NOTE: querySelectorAll returns a NodeList (≠ Array)!
+    Array.from( document.querySelectorAll(".target") ).forEach(x => x.innerText = "owned");
 })();

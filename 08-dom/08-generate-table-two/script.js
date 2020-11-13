@@ -10,25 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    let tableau = document.createElement("table");
-        let row, column;
-        // creating all cells
+    const body = document.getElementById("target");
+    const tbl = document.createElement("table");
+    const tblBody = document.createElement("tbody");
+    for (let j = 0; j < 10; j++) {
+        const row = document.createElement("tr");
         for (let i = 0; i < 10; i++) {
-            row = document.createElement("tr");
-            tableau.appendChild(row);
-
-            for (let j = 0; j < 10; j++) {
-            column = document.createElement("td");
-            row.appendChild(column);
-
-            resultat = (i+1)*(j+1);
-            column.innerText = (i+1)+ " x " + (j+1) + " = " + resultat;
-            }
-
+            const cell = document.createElement("td");
+            cell.innerHTML = `${i + 1}&times;${j + 1}=${(i + 1) * (j + 1)}`;
+            row.appendChild(cell);
         }
-
-    document.getElementById("target").appendChild(tableau);
-
-
+        tblBody.appendChild(row);
+    }
+    tbl.appendChild(tblBody);
+    body.appendChild(tbl);
 })();

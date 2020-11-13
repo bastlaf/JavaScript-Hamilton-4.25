@@ -10,9 +10,9 @@
 // You will have time to focus on it later.
 
 (function() {
-    // your code here
-    let question = ("Tu t'appelles comment ptit loulou ?");
-    let hello = ("Bonjour toi !");
-    alert (hello);
-    prompt(question);
+
+    const name = window.prompt("What's your name?");
+
+    window.alert(`Hello, ${name}!`);
+
 })();

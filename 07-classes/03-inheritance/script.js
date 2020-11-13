@@ -8,7 +8,6 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-
 (() => {
     class Animal {
         sayHello() {
@@ -16,14 +15,29 @@
         }
     }
 
+    class Cat extends Animal {
+        // making the first class
+        constructor(name) {
+            super(); // to call the main class animal
+            this.name = name;
+        }
+    }
+    Cat.greeting = "Meow";
 
-console.log("ON DOIT PAS LE FAIRE CELUI CI HAAAAAAAAAAAAAAAAAAAAAAAAAA !!!!!!!!")
+    class Dog extends Animal {
+        // making second class
+        constructor(name) {
+            super(); // to call main class animal
+            this.name = name;
+        }
+    }
+    Dog.greeting = "Woof";
 
+    document.getElementById("run").addEventListener("click", () => {
+        const cat1 = new Cat("Simba");
+        const dog1 = new Dog("Duke");
 
-
-
-
-
-
-
+        console.log(cat1.sayHello());
+        console.log(dog1.sayHello());
+    });
 })();

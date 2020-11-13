@@ -16,11 +16,10 @@
             this.age = age;
         }
     }
+
     document.getElementById("run").addEventListener("click", function() {
-
-        console.table(new Cat("Skitty", 9));
-        console.table(new Cat("Pixel", 6));
-
+        const firstCat = new Cat("Skitty", 9);
+        const secondCat = new Cat("Pixel", 6);
+        console.log(firstCat, secondCat);
     });
-
 })();
